@@ -1,0 +1,58 @@
+.add, .add label, .number, li {
+  display: flex;
+  justify-content: center;
+}
+
+.add label, .number input, li span, .button-group {
+  flex: 1;
+}
+
+.add {
+  flex-wrap: wrap;
+}
+
+.add label {
+  flex-flow: column;
+  padding: 0.2em 0.4em;
+}
+
+.add button {
+  width: 48px;
+  height: 29px;
+  align-self: flex-end;
+}
+
+.number span, li span {
+  align-self: center;
+}
+
+.number input {
+  margin-left: 0.2em;
+}
+
+h3 {
+  margin: 0.375em 0;
+}
+
+ul {
+  margin-top: 0.375em;
+}
+
+li {
+  list-style: none;
+  margin-bottom: 0.5em;
+  padding: 0.5em;
+  border-radius: 15px;
+}
+
+li:last-child {
+  margin-bottom: initial;
+}
+
+.selected {
+  background-color: #FFF5E8;
+}
+
+.selected button {
+  color: #F4AE9C;
+}

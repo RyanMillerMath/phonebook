@@ -1,0 +1,49 @@
+<button *ngIf="!add" (click)="add = !add;">
+  Add Contact
+</button>
+
+<div class="add" *ngIf="add">
+  <label>
+    Contact name: <input #contactName placeholder="John Doe">
+  </label>
+
+  <label>
+    Contact number: <div class="number"><span>+1</span> <input #contactNumber placeholder="(123) 456-7890"></div>
+  </label>
+
+  <label>
+    Contact email: <input type="email" #contactEmail placeholder="johndoe@example.com">
+  </label>
+
+  <button (click)="addContact(contactName.value, contactNumber.value, contactEmail.value); 
+                   contactName.value=''; 
+                   contactNumber.value='';
+                   contactEmail.value='';">
+    Add
+  </button>
+</div>
+
+<h3>
+  Contacts
+</h3>
+
+<ul>
+  <li *ngFor="let contact of contacts"
+      [class.selected]="contact === selectedContact"
+      (click)="selectContact(contact);">
+
+    <span>{{contact.name.firstName}} {{contact.name.lastName}}</span>
+
+    <div class="button-group">
+      <button *ngIf="contact === selectedContact"
+              (click)="goToInfo();">
+        View Info
+      </button>
+
+      <button (click)="removeContact(contact);
+                       $event.stopPropagation();">
+        Delete
+      </button>
+    </div>
+  </li>
+</ul>

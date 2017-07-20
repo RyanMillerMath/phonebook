@@ -1,0 +1,17 @@
+:host {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-family: Arial;
+}
+
+:host, div {
+  width: 100%;
+  flex: 1;
+}
+
+div {
+  max-width: 960px;
+}

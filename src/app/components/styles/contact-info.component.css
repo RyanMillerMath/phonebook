@@ -1,0 +1,34 @@
+h3 {
+  margin: 0.5em 0;
+}
+
+h3 span {
+  margin-right: 0.4em;
+}
+
+.edit {
+  display: inline-block;
+  margin-bottom: 1em;
+}
+
+.edit div, .edit label {
+  display: flex;
+}
+
+.edit label {
+  flex-flow: column;
+  flex: 1;
+}
+
+.edit > div:last-child {
+  margin-top: 0.375em;
+}
+
+label:last-child {
+  margin-left: 0.375em;
+}
+
+label span {
+  align-self: flex-end;
+  margin-right: 0.2em;
+}

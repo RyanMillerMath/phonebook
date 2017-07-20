@@ -1,0 +1,32 @@
+<div *ngIf="contact">                                             <!--ngIf is used to avoid requiring ? operator on every contact property-->
+  <h2>{{contact.name.firstName}} {{contact.name.lastName}}</h2>
+  <h3><span>Phone: +1 {{contact.phoneNumber}}</span> Email: {{contact.email}}</h3>
+
+  <div class="edit" *ngIf="editing">
+    <div>
+      <label>
+        First Name: <input [(ngModel)]="contact.name.firstName" placeholder="John">
+      </label>
+
+      <label>
+        Last Name: <input [(ngModel)]="contact.name.lastName" placeholder="Doe">
+      </label>
+    </div>
+
+    <div>
+      <label>
+        Phone Number: <div><span>+1</span> <input [(ngModel)]="contact.phoneNumber" placeholder="(123) 456-7890"></div>
+      </label>
+
+      <label>
+        Email: <input type="email" [(ngModel)]="contact.email" placeholder="johndoe@example.com">
+      </label>
+    </div>
+  </div>
+
+  <div>
+    <button *ngIf="!editing" (click)="editing = !editing;">Edit</button>
+    <button *ngIf="editing" (click)="saveChanges();">Save Changes</button>
+    <button (click)="backToPhonebook();">Back to Phonebook</button>
+  </div>
+</div>
