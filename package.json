@@ -4,17 +4,15 @@
   "license": "MIT",
   "scripts": {
     "ng": "ng",
-    "start": "node server.js",
+    "start": "ng serve",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "postinstall": "ng build --aot -prod",
-    "deploy" : "git push origin master && git push heroku master"
+    "deploy": "git push origin master && git push heroku master"
   },
   "private": true,
   "dependencies": {
-    "@angular/cli": "1.1.2",
     "@angular/animations": "^4.0.0",
     "@angular/common": "^4.0.0",
     "@angular/compiler": "^4.0.0",
@@ -26,9 +24,8 @@
     "@angular/router": "^4.0.0",
     "core-js": "^2.4.1",
     "rxjs": "^5.1.0",
-    "zone.js": "^0.8.4"
-  },
-  "devDependencies": {
+    "zone.js": "^0.8.4",
+    "@angular/cli": "1.1.2",
     "@angular/compiler-cli": "^4.0.0",
     "@angular/language-service": "^4.0.0",
     "@types/jasmine": "2.5.45",
@@ -47,8 +44,6 @@
     "tslint": "~5.3.2",
     "typescript": "~2.3.3"
   },
-  "engines": {
-    "node": "6.11.1",
-    "npm": "3.10.9"
+  "devDependencies": {
   }
 }
