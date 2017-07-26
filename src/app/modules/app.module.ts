@@ -22,7 +22,8 @@ import { InMemoryDataService } from "../services/in-memory-data.service";
     AppComponent,
     BannerComponent,
     PhoneBookComponent,
-    ContactInfoComponent
+    ContactInfoComponent,
+    PhonePipe
   ],
 
   imports: [
